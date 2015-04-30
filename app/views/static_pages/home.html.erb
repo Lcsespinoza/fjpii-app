@@ -1,24 +1,11 @@
 <% provide(:title, 'Comunidad') %>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= yield(:title) %></title>
-  </head><html>
-  <head>
-    <title>Comunidad</title>
-  </head>
-  <body>
-    <h1>Comunidad</h1>
-	<p>
-		te damos la bienvenida a la comunidad de ex becados de la fundación Juan Pablo II.
-	</p>	 	
-	<p>
-		Programa de Becas de Postgrado para Estudios en el Extranjero:
+ 	
+<div class="center hero-unit">
+  <h1>Bienvenido comunidad de ex becados</h1>
 
-		La Fundación Juan Pablo II ha instaurado un Programa de Becas de Postgrado para Estudios en el Extranjero.Estas Becas de Postgrado están dirigidas exclusivamente a profesionales chilenos o extranjeros, que hayan egresado como becarios de la Fundación, formados en carreras del área de educación de nivel preescolar, básico o medio, que quieran iniciar o continuar estudios conducentes a la obtención del grado académico de Magíster, en instituciones extranjeras de excelencia, seleccionados por la Fundación de acuerdo a la orientación de sus programas, estándares de calidad académica y prestigio institucional.
-	</p>	 	
-	<p>	 	
-		El objetivo de estas Becas de Postgrado es profundizar la formación recibida por los egresados de carreras del área de educación, en programas de Magister especialmente enfocados a las prácticas docentes y de aula. Este objetivo se cumple en la medida que los becarios adquieren herramientas que les permiten impactar positivamente en la realidad educativa en que se inserten, comprometiéndose con un desarrollo integral en el plano académico, valórico y social de sus alumnos, y contribuyendo al desarrollo científico, social y cultural del país.
-	</p>
-  </body>
-</html>
+  <h2>
+	Comunidad de exbecados	
+  </h2>
+
+  <%= link_to "Ingresar exbecado manualmente", nuevoexbecado_path , class: "btn btn-large btn-primary" %>
+</div>
