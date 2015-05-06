@@ -1,3 +1,141 @@
 <% provide(:title, 'Nuevo Exbecado') %>
 <h1>Ingresar nuevo Ex becado</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+      
+
+
+      <h3 class="panel-title">Datos personales</h3>
+
+      <%= f.label :rut, "Rut (sin puntos ni guión)" %>
+      <%= f.text_field :rut %>
+
+      <%= f.label :num_alumno, "N° de alumno" %>
+      <%= f.text_field :num_alumno %>
+
+      <%= f.label :perfil %>
+      <%= f.select :perfil, [['exbecado'], ['administrador']] %>
+
+      <%= f.label :sexo %>
+      <%= f.select :sexo, [['masculino'], ['femenino']] %>
+
+      <%= f.label :nombre %>
+      <%= f.text_field :nombre %>
+
+      <%= f.label :paterno, "Apellido paterno" %>
+      <%= f.text_field :paterno %>
+      
+      <%= f.label :materno, "Apellido materno" %>
+      <%= f.text_field :materno %>
+      
+      <%= f.label :fecha_nacimiento %>
+      <%= f.date_field :fecha_nacimiento %>
+ 
+      <%= f.label :estado_civil %>
+      <%= f.select :estado_civil, [['soltero(a)'], ['casado(a)'], ['viudo(a)'], ['separado(a)'], ['divorciado(a)']] %>
+
+      <%= f.label :hijos, "N° de hijos"%>
+      <%= f.text_field :hijos %>
+
+      <%= f.label :celular %>
+      <%= f.text_field :celular %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+
+      <%= f.label :direccion, "Dirección" %>
+      <%= f.text_field :direccion %>
+
+      <%= f.label :comuna %>
+      <%= f.select(:comuna, options_for_select(comunas))%>
+      
+      <%= f.label :ciudad %>
+      <%= f.text_field :ciudad %>
+
+      <%= f.label :region, "Región" %>
+      <%= f.select(:region, options_for_select(regiones))%>
+
+      <%= f.label :postal, "Código postal" %>
+      <%= f.text_field :postal %>
+
+      <%= f.label :pais, "País" %>
+      <%= f.text_field :pais %>
+
+      <%= f.label :telefono, "Teléfono" %>
+      <%= f.text_field :telefono %>
+
+
+      <h3 class="panel-title">Datos Laborales</h3>
+
+      <%= f.label :direccion_lab, "Dirección laboral" %>
+      <%= f.text_field :direccion_lab %>
+
+      <%= f.label :comuna_lab, "Comuna laboral" %>
+      <%= f.select(:comuna_lab, options_for_select(comunas))%>
+      
+      <%= f.label :ciudad_lab , "Ciudad laboral" %>
+      <%= f.text_field :ciudad_lab %>
+
+      <%= f.label :region_lab, "Región laboral" %>
+      <%= f.select(:region_lab, options_for_select(regiones))%>
+
+      <%= f.label :postal_lab, "Código postal laboral" %>
+      <%= f.text_field :postal_lab %>
+
+      <%= f.label :pais_lab, "País laboral" %>
+      <%= f.text_field :pais_lab %>
+
+      <%= f.label :telefono_lab, "Teléfono laboral" %>
+      <%= f.text_field :telefono_lab %>
+
+
+      <h3 class="panel-title">Datos Fundación</h3>
+      <%= f.label :universidad %>
+      <%= f.text_field :universidad %>
+
+      <%= f.label :carrera %>
+      <%= f.select(:carrera, options_for_select(carreras))%>
+
+      <%= f.label :especialidad %>
+      <%= f.text_field :especialidad %>
+
+      <%= f.label :ano_ing_u, "Año ingreso UC" %>
+      <%= f.text_field :ano_ing_u %>
+
+      <%= f.label :ano_egr_u, "Año egreso UC" %>
+      <%= f.text_field :ano_egr_u %>
+
+      <%= f.label :ano_ing_fjp, "Año ingreso FJP" %>
+      <%= f.text_field :ano_ing_fjp %>
+
+
+
+      <%= f.label :religion, "Religión" %>
+      <%= f.text_field :religion %>
+
+      <%= f.label :adhesion_rel, "Adhesión religiosa" %>
+      <%= f.select :adhesion_rel, [['ninguna'], ['baja'], ['media'], ['alta']] %>
+      <%= f.label :actividad, "Otra actividad" %>
+      <%= f.select :actividad, [['scout'], ['sociales'], ['deportivas'], ['politicas'], ['religiosas'], ['culturales'], ['otras']] %>
+
+      <%= f.label :directorio, "Mostrar información en Directorio" %>
+      <%= f.check_box :directorio, {checked: true}, "true", "false" %> Permitir
+ 
+
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Ingresar Exbecado", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
